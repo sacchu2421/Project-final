@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "DeleteProduct";
+}
+
+<h3 class="accordion-header">DeleteProduct</h3>
+<br />
+<h4>Kindly Enter the Product Id Which you want to delete</h4>
+
+<html>
+<div>
+    <form action="/Admin/DeleteProducts" method="post">
+
+    <label >Product Id</label><br />
+    <input type="text" name="ProductId"/>
+    <input type="submit" name="BtnSubmit" value="Delete"/>
+
+    </form>
+
+</div>
+</html>

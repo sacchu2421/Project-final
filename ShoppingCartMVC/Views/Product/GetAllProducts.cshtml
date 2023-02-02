@@ -1,0 +1,43 @@
+﻿@using ShoppingCartMVC.ViewModel
+@using ShoppingCartMVC.Models
+@model ProductViewModel
+@{
+    ViewBag.Title = "GetProducts";
+}
+<html>
+    <body>
+    <table class="table table-striped table-primary"align="center" border="2">
+        <thead>
+        <tr>
+        <th scope="col">Product Id
+           
+        </th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Product Category</th>
+        <th scope="col">Price</th>
+        <th scope="col">Image</th>
+        <th scope="col">Description</th>
+        <th scope="col">Add</th>
+        </tr>
+        </thead>
+        
+          
+        @foreach (Product item in Model.products)
+        {
+          
+         <tr>
+        <td>@item.ProductId</td>
+        
+        <td>@item.ProductName</td> 
+          <td>@item.ProductCategory</td>
+          <td>@item.Productprice</td> 
+          <td><img src="@Html.DisplayFor(x=>item.ProductImage)" height="113" width="113" border="0" /></td>
+          <td>@item.ProductDescription</td>
+          <td><a href="/Cart/AddToCart/@item.ProductId">AddCart</a></td>
+        </tr>
+        
+       }
+     
+   </body>
+
+   </html>

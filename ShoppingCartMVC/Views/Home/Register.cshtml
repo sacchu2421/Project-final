@@ -1,0 +1,55 @@
+﻿
+<script>
+
+function validation() {
+    pwd = document.getElementById("pass");
+confirmpwd = document.getElementById("confirmPass");
+button = document.getElementById("submit");
+if (pwd == confirmpwd) {
+     button.disabled = false;
+     //return true;
+}
+//}else{
+
+   
+//     button.disabled = true;
+//     //alert("Password do no match")
+//    //return false;
+//}
+
+}
+
+</script>
+<div class="container">
+  <div class="row justify-content-center">
+  <div class="col-md-5">
+   <div class="card">
+     <h2 class="card-title text-center">Register</h2>
+      <div class="card-body py-md-4">
+       <form action="/Home/Registeration" method="post">
+          <div class="form-group">
+             <input type="text" class="form-control" name="UserName" placeholder="UserName">
+        </div>
+        <div class="form-group">
+             <input type="password" class="form-control" name="Password" placeholder="Password" id="pass">
+                            </div>
+                             <div class="form-group">
+             <input type="password" class="form-control" name="ConfirmPassword" placeholder="Confirm" id="confirmPass" >
+                            </div>
+                          
+   <div class="form-group">
+     <input type="text" class="form-control" name="Address" placeholder="Address" onkeypress="validation()">
+   </div>
+   <div class="form-group">
+      <input type="number" class="form-control" name="Phone" placeholder="Phone">
+   </div>
+   <div class="d-flex flex-row align-items-center justify-content-between">
+     <br/>
+            <input type="submit" value="Create"  id="submit" disabled/>
+          </div>
+       </form>
+     </div>
+  </div>
+</div>
+</div>
+</div>

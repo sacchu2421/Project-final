@@ -1,0 +1,47 @@
+﻿
+<html>
+    <head>
+        <script>
+        function ResetForm() {
+            document.getElementById('id').value = "";
+            document.getElementById('name').value = "";
+            document.getElementById('pCategory').value = "";
+             document.getElementById('pPrice').value = "";
+              document.getElementById('pImage').value = "";
+            document.getElementById('Description').value = "";
+        }
+    </script>
+    </head>
+<body>
+<form action="/Admin/UpdateProductById" method="post" class="align-content-center">
+     
+  <div class="container" >
+    <h1>Update Product</h1>
+    <p>Please Fill the form with Updated Product Values.</p>
+    <hr>
+    <label for="name"><b>Enter Product Id</b></label>
+    <input type="text" placeholder="Enter Product Id" name="ProductId" id="id" required> <br/>
+     <hr>
+
+    <label for="name"><b>Updated Product Name</b></label>
+    <input type="text" placeholder="Enter Product Name" name="ProductName" id="name" required> <br/>
+     <hr>
+    <label for="pCategory"><b>Updated Product Category</b></label>
+    <input type="text" placeholder="Enter Category" name="ProductCategory" id="pCategory" required><br/>
+     <hr>
+    <label for="pPrice"><b>Updated Product Price</b></label>
+    <input type="text" placeholder="Enter Price"  name="Productprice" id="pPrice" required><br/>
+    <hr>
+    <label for="pImage"><b>Updated Product Image</b></label>
+    <input type="text" placeholder="Enter Image URL" name="ProductImage" id="pImage" required><br/>
+    <hr>
+    <label for="description"><b>Updated Product Description</b></label>
+    <input type="text" placeholder="Enter Description" name="ProductDescription" id="description" required><br/>
+    <hr>
+
+    <input type="submit" value="Update Product"/>
+      <input type="button" name="BtnReset" value="Reset" onclick="ResetForm();" />
+
+</form>
+</body>
+    </html>

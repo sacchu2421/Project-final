@@ -1,0 +1,46 @@
+﻿@using ShoppingCartMVC.Models
+@model ShoppingCartMVC.Models.Admin
+<html>
+   
+<head>
+    <h4> Hello @Model.Email Here are your Details</h4>
+    <table class="table table-striped table-light">
+        <tr>
+            <th>Admin Id</th>
+            <th>Admin Name</th>
+            <th>Admin Password</th>
+            <th>Admin Phone</th>
+        </tr>
+        <tr>
+            <td>@Model.Id</td>
+            <td>@Model.Email</td>
+            <td>@Model.Password</td>
+            <td>@Model.Phone</td>
+        </tr>
+        <p class="alert-primary">Given Below are the functionalities which you can use </p>   
+       
+        </table>
+        <table class="table table-striped table-danger">
+            <tr>
+                <th>Insert Product</th>
+                <th>Delete Product</th>
+                <th>Update Product</th>
+                <th>Get All Products</th>
+                <th>Get All Users</th>
+            
+
+             
+ <div>
+            </tr>
+            <tr>
+                <td><a href="/Admin/CreateProduct">Add</a></td>
+                 <td><a href="/Admin/DeleteProduct">Delete</a></td>
+                <td><a href="/Admin/UpdateProduct">Update</a></td> 
+                <td><a href="/Admin/GetProducts">GetProducts</a></td> 
+                 <td><a href="/Admin/GetAllUserDetails">GetAllUsers</a></td> 
+            </tr>
+        </table>
+</head>
+<body>
+    </body>
+</html>
